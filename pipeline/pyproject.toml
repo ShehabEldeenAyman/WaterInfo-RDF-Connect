@@ -1,0 +1,50 @@
+[project]
+name = "Waterinfo-pipeline"
+version = "0.0.1"
+description = "RDF-Connect pipeline to ingest Waterinfo in a knowledge graph."
+authors = [
+    { name = "Shehabeldeen Abdelfatah", email = "shehab.ayman@vito.be" }
+]
+readme = "README.md"
+requires-python = "==3.13.*"
+license = "MIT"
+dependencies = [
+    "printprocessorpy>=0.0.1",
+    "rdfc-runner>=0.0.3",
+    "rmlprocessorpy>=0.0.1",
+    "prettifyprocessorpy>=0.0.1",
+    "csvpreprocessorpy>=0.0.1",
+    "shaclvalidatepy>=0.0.1",
+    "rdf2tssprocssorpy>=0.0.1",
+    "tss2rdfprocessorpy>=0.0.1",
+    "graphdbprocessorpy>=0.0.1",
+]
+
+[project.urls]
+Homepage = "https://rdf-connect.github.io"
+Repository = "https://github.com/rdf-connect/vienna-weather-forecast-kg-pipeline"
+Issues = "https://github.com/rdf-connect/vienna-weather-forecast-kg-pipeline/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["resources"]
+
+[tool.hatch.envs.default]
+type = "virtual"
+path = ".venv"
+system-packages = false
+installer = "uv"
+env-vars = { PYTHONPATH = "src" }
+
+[tool.uv.sources]
+printprocessorpy = { path = "../Processorrepo/PrintProcessorPy/dist/printprocessorpy-0.0.1.tar.gz" }
+RmlProcessorPy = { path = "../Processorrepo/RmlProcessorPy/dist/rmlprocessorpy-0.0.1.tar.gz" }
+PrettifyProcessorPy = { path = "../Processorrepo/PrettifyProcessorPy/dist/prettifyprocessorpy-0.0.1.tar.gz" }
+CSVpreProcessorPy = { path = "../Processorrepo/CSVpreProcessorPy/dist/csvpreprocessorpy-0.0.1.tar.gz" }
+SHACLvalidatePy = { path = "../Processorrepo/SHACLvalidatePy/dist/shaclvalidatepy-0.0.1.tar.gz" }
+RDF2TSSProcssorPy = { path = "../Processorrepo/RDF2TSSProcssorPy/dist/rdf2tssprocssorpy-0.0.1.tar.gz" }
+TSS2RDFProcessorPy = { path = "../Processorrepo/TSS2RDFProcessorPy/dist/tss2rdfprocessorpy-0.0.1.tar.gz" }
+GraphdbProcessorPy = { path = "../Processorrepo/GraphdbProcessorPy/dist/graphdbprocessorpy-0.0.1.tar.gz" }

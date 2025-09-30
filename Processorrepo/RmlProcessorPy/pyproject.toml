@@ -1,0 +1,39 @@
+[project]
+name = "RmlProcessorPy"
+version = "0.0.1"
+description = "RML processor that actually works"
+authors = [
+    { name = "Shehabeldeen Abdelfatah", email = "shehab.ayman@vito.be" }
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+license = "MIT"
+dependencies = [
+    "pytest>=8.4.1",
+    "pytest-asyncio>=1.1.0",
+    "rdfc-proto>=0.0.1",
+    "rdfc-runner>=0.0.3",
+]
+
+[project.urls]
+Homepage = "https://rdf-connect.github.io"
+Repository = "https://github.com/rdf-connect/template-processor-py"
+Issues = "https://github.com/rdf-connect/template-processor-/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/RmlProcessorPy"]
+
+[tool.hatch.envs.default]
+type = "virtual"
+path = ".venv"
+system-packages = false
+installer = "uv"
+env-vars = { PYTHONPATH = "src" }
+

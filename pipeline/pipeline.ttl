@@ -1,0 +1,153 @@
+@prefix rdfc: <https://w3id.org/rdf-connect#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix ex: <http://example.com/>.
+
+
+### Import runners and processors
+<> owl:imports
+  <./node_modules/@rdfc/js-runner/index.ttl>,    # node runner
+  #<./node_modules/@rdfc/http-utils-processor-ts/processors.ttl>, # http fetch processor
+  <./node_modules/@rdfc/log-processor-ts/processor.ttl>,# log processor
+  <./node_modules/@rdfc/file-utils-processors-ts/processors.ttl>, #glob processor
+  <./.venv/lib/python3.13/site-packages/rdfc_runner/index.ttl>,#python runner
+  <./.venv/lib/python3.13/site-packages/PrintProcessorPy/processor.ttl>,
+  <./.venv/lib/python3.13/site-packages/RmlProcessorPy/processor.ttl>,
+  <./.venv/lib/python3.13/site-packages/PrettifyProcessorPy/processor.ttl>,
+  #<./.venv/lib/python3.13/site-packages/CSVpreProcessorPy/processor.ttl>,
+  <./.venv/lib/python3.13/site-packages/SHACLvalidatePy/processor.ttl>,
+  <./.venv/lib/python3.13/site-packages/RDF2TSSProcssorPy/processor.ttl>,
+  <./.venv/lib/python3.13/site-packages/TSS2RDFProcessorPy/processor.ttl>,
+  <./.venv/lib/python3.13/site-packages/GraphdbProcessorPy/processor.ttl>
+
+  # <./node_modules/@rdfc/shacl-processor-ts/processors.ttl>
+
+  #<./build/plugins/rml-processor-jvm-master-SNAPSHOT-all.jar>, #rml mapper
+  #<https://javadoc.jitpack.io/com/github/rdf-connect/jvm-runner/runner/master-SNAPSHOT/runner-master-SNAPSHOT-index.jar>
+.
+
+### Define the channels
+<CSVFile> a rdfc:Reader, rdfc:Writer. # channel
+<mappingData> a rdfc:Reader, rdfc:Writer.
+<rdf> a rdfc:Reader, rdfc:Writer.
+<WrittenFile> a rdfc:Reader, rdfc:Writer.
+<alreadymappedData> a rdfc:Reader, rdfc:Writer.
+<prettyData> a rdfc:Reader, rdfc:Writer.
+<report> a rdfc:Reader, rdfc:Writer.
+<validated> a rdfc:Reader, rdfc:Writer.
+<CSVProcessedData> a rdfc:Reader, rdfc:Writer.
+<emptychannel> a rdfc:Reader, rdfc:Writer.
+<shapechannel> a rdfc:Reader, rdfc:Writer.
+<reportchannel> a rdfc:Reader, rdfc:Writer.
+<RDF2TSSchannel> a rdfc:Reader, rdfc:Writer.
+<TSS2RDFchannel> a rdfc:Reader, rdfc:Writer.
+
+### Define the pipeline
+<> a rdfc:Pipeline;
+ rdfc:consistsOf [
+       rdfc:instantiates  rdfc:NodeRunner; 
+       rdfc:processor <fileReader>,
+      #  ,<mappingReader> 
+         #<logger>,
+         <shapeReader>
+        #<validator>
+       ;
+   ], 
+  #   [
+  #      rdfc:instantiates rdfc:JvmRunner;
+  #      rdfc:processor <mapper>;
+  #  ]
+  # ,
+     [
+       rdfc:instantiates rdfc:PyRunner; #runners for lgoic written in python
+       rdfc:processor
+       <rmlmapper>,
+       <prettify>,
+      <fileSaver>,
+      <customSHACL>,
+      <RDF2TSS>,
+      <reportwriter>,
+      <TSSSaver>,
+      <TSS2RDF>,
+      <RDFSaver>,
+      <GraphDB>
+      #<SHACLReportSaver>
+      #<PreProcessor> 
+       ;
+   ]
+   .
+
+### Define the processors
+<fileReader> a rdfc:GlobRead;
+  rdfc:glob    "./WFresources/sample_data.csv";
+  rdfc:output <CSVFile>
+  .
+
+
+<rmlmapper> a rdfc:RmlProcessorPy;
+  rdfc:writer <alreadymappedData>;
+  rdfc:mappingFile "./WFresources/NewMapping.rml.ttl".
+
+# Processor to validate the output RDF with SHACL
+# <validator> a rdfc:Validate;
+#     rdfc:shaclPath <./WFresources/shacl-shape.ttl>;
+#     rdfc:incoming <alreadymappedData>;
+#     rdfc:outgoing <validated>;
+#     rdfc:report <report>;
+#     rdfc:validationIsFatal false;
+#     rdfc:mime "text/turtle".
+
+<prettify> a rdfc:PrettifyProcessorPy;
+    rdfc:reader <alreadymappedData>;
+    rdfc:writer <prettyData>.
+
+
+
+# <SHACLReportSaver> a rdfc:PrintProcessorPy;
+#   rdfc:reader <report>;
+#   rdfc:loc "./WFresources/generated/SHACLReport.txt".
+
+# <logger> a rdfc:LogProcessorJs;
+#     rdfc:reader <prettyData>;
+#     rdfc:level "info";
+#     rdfc:label "output".
+
+# <PreProcessor> a rdfc:CSVpreProcessorPy;
+#     rdfc:reader <CSVFile>;
+#     rdfc:writer <CSVProcessedData>.
+
+<shapeReader>a rdfc:GlobRead;
+  rdfc:glob    "./WFresources/shape.ttl";
+  rdfc:output <shapechannel>.
+
+<customSHACL> a rdfc:SHACLvalidatePy;
+    rdfc:datareader <prettyData>;
+    rdfc:datawriter <validated>;
+    rdfc:shaclwriter <reportchannel>;
+    rdfc:loc "./WFresources/shape.ttl".
+
+<reportwriter> a rdfc:PrintProcessorPy;
+  rdfc:reader <reportchannel>;
+  rdfc:loc "./WFresources/generated/shapereport.txt".
+
+<RDF2TSS> a rdfc:RDF2TSSProcssorPy;
+  rdfc:reader <validated>;
+  rdfc:writer <RDF2TSSchannel>.
+
+<TSS2RDF> a rdfc:TSS2RDFProcessorPy;
+  rdfc:reader <RDF2TSSchannel>;
+  rdfc:writer <TSS2RDFchannel>.
+
+<fileSaver> a rdfc:PrintProcessorPy;
+  rdfc:reader <validated>;
+  rdfc:loc "./WFresources/generated/pretty_data.ttl".
+
+<TSSSaver> a rdfc:PrintProcessorPy;
+  rdfc:reader <RDF2TSSchannel>;
+  rdfc:loc "./WFresources/generated/TSS_data.ttl". 
+
+<RDFSaver> a rdfc:PrintProcessorPy;
+  rdfc:reader <TSS2RDFchannel>;
+  rdfc:loc "./WFresources/generated/RDF_data.ttl". 
+
+<GraphDB> a rdfc:GraphdbProcessorPy;
+  rdfc:reader <TSS2RDFchannel>.
