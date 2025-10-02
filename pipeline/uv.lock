@@ -72,6 +72,46 @@ requires-dist = [
 ]
 
 [[package]]
+name = "duckdb"
+version = "1.4.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/93/adc0d183642fc9a602ca9b97cb16754c84b8c1d92e5b99aec412e0c419a8/duckdb-1.4.0.tar.gz", hash = "sha256:bd5edee8bd5a73b5822f2b390668597b5fcdc2d3292c244d8d933bb87ad6ac4c", size = 18453175, upload-time = "2025-09-16T10:22:41.509Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2f/64/ee22b2b8572746e1523143b9f28d606575782e0204de5020656a1d15dd14/duckdb-1.4.0-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:1d94d010a09b1a62d9021a2a71cf266188750f3c9b1912ccd6afe104a6ce8010", size = 31307662, upload-time = "2025-09-16T10:22:14.9Z" },
+    { url = "https://files.pythonhosted.org/packages/76/2e/4241cd00046ca6b781bd1d9002e8223af061e85d1cc21830aa63e7a7db7c/duckdb-1.4.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:c61756fa8b3374627e5fa964b8e0d5b58e364dce59b87dba7fb7bc6ede196b26", size = 17295617, upload-time = "2025-09-16T10:22:17.239Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/98/5ab136bc7b12ac18580350a220db7c00606be9eac2d89de259cce733f64c/duckdb-1.4.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:e70d7d9881ea2c0836695de70ea68c970e18a2856ba3d6502e276c85bd414ae7", size = 14826727, upload-time = "2025-09-16T10:22:19.415Z" },
+    { url = "https://files.pythonhosted.org/packages/23/32/57866cf8881288b3dfb9212720221fb890daaa534dbdc6fe3fff3979ecd1/duckdb-1.4.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:2de258a93435c977a0ec3a74ec8f60c2f215ddc73d427ee49adc4119558facd3", size = 18421289, upload-time = "2025-09-16T10:22:21.564Z" },
+    { url = "https://files.pythonhosted.org/packages/a0/83/7438fb43be451a7d4a04650aaaf662b2ff2d95895bbffe3e0e28cbe030c9/duckdb-1.4.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:a6d3659641d517dd9ed1ab66f110cdbdaa6900106f116effaf2dbedd83c38de3", size = 20426547, upload-time = "2025-09-16T10:22:23.759Z" },
+    { url = "https://files.pythonhosted.org/packages/21/b2/98fb89ae81611855f35984e96f648d871f3967bb3f524b51d1372d052f0c/duckdb-1.4.0-cp313-cp313-win_amd64.whl", hash = "sha256:07fcc612ea5f0fe6032b92bcc93693034eb00e7a23eb9146576911d5326af4f7", size = 12290467, upload-time = "2025-09-16T10:22:25.923Z" },
+]
+
+[[package]]
+name = "elementpath"
+version = "4.8.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ac/41/afdd82534c80e9675d1c51dc21d0889b72d023bfe395a2f5a44d751d3a73/elementpath-4.8.0.tar.gz", hash = "sha256:5822a2560d99e2633d95f78694c7ff9646adaa187db520da200a8e9479dc46ae", size = 358528, upload-time = "2025-03-03T20:51:08.397Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/95/615af832e7f507fe5ce4562b4be1bd2fec080c4ff6da88dcd0c2dbfca582/elementpath-4.8.0-py3-none-any.whl", hash = "sha256:5393191f84969bcf8033b05ec4593ef940e58622ea13cefe60ecefbbf09d58d9", size = 243271, upload-time = "2025-03-03T20:51:03.027Z" },
+]
+
+[[package]]
+name = "falcon"
+version = "4.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/90/85/a4abc8357f6bc6b6b0b3d80e2c319c895900c518a3528279a222d7a53b7e/falcon-4.1.0.tar.gz", hash = "sha256:dbc3fa642b43e7662f121d0a7b5d7ea42a1a31fb22ae63572c42ee3ecd1f79d0", size = 659308, upload-time = "2025-08-06T16:08:20.905Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/aa/5d/3b76f1582bb3cb17d21bd7d5187a6fa38ed43517569ee3235c94f0746b78/falcon-4.1.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:8ea3954305fcf7ebc1aac90f36c01d26ce12b77b059281166b95a553b3cc9d45", size = 407931, upload-time = "2025-08-06T16:19:23.642Z" },
+    { url = "https://files.pythonhosted.org/packages/60/1a/7bbd6f5d192a8ccd0a83f429740549f2d3308464982ea47bd4d9863bdb45/falcon-4.1.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:84063a5242696c4cd9040ca53d178604445e8ce8b0a112c9461465554784644b", size = 403950, upload-time = "2025-08-06T16:19:25.349Z" },
+    { url = "https://files.pythonhosted.org/packages/1d/71/6c9a0335a35b1e914ca1a53a4520b6abce4f2b18c1a447a8d6e84c4e1c3f/falcon-4.1.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:b3dbb2648f8d0670f48d5cdfa0b2b1decba6d1e505679291ffeaa5c4cb7e15df", size = 824177, upload-time = "2025-08-06T16:19:27.193Z" },
+    { url = "https://files.pythonhosted.org/packages/fd/fc/527e46842af688d4f532573446399ec48872596b32d1273f9b467b009ee6/falcon-4.1.0-cp313-cp313-manylinux2014_s390x.manylinux_2_17_s390x.manylinux_2_28_s390x.whl", hash = "sha256:b0c7cc2a2b3a715086a3b7877f6a6ddfcac7261c15ceb671c6a09f442b06ef66", size = 857963, upload-time = "2025-08-06T16:19:29.142Z" },
+    { url = "https://files.pythonhosted.org/packages/ff/a3/97f7be3e4e47a3e5c4f417ca015feb3b4bfe70b77ce00e4fd2a5c4408095/falcon-4.1.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:ccc7302a0056f8a03b98c9aa9acb96ad4cae4aabf3aa857f0c9f1871b58ae799", size = 832928, upload-time = "2025-08-06T16:19:31.018Z" },
+    { url = "https://files.pythonhosted.org/packages/5f/f1/ca585ad0848b664d1b4c34118140ef8aac2ee3c27a167463c5dcaadc5410/falcon-4.1.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:06e554c1448fbad75de4747247d02a29a944b666f44279928efcac1324e941b4", size = 816075, upload-time = "2025-08-06T16:19:32.837Z" },
+    { url = "https://files.pythonhosted.org/packages/a2/14/85b7026a265678b50cdbbb2efbafd106669b6347b1f8de5cd445d8f0e51e/falcon-4.1.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:9a01511d6ef24eeb228b4bd47ba05e8e74f50834b5530223e834be84c0eae506", size = 830746, upload-time = "2025-08-06T16:19:34.413Z" },
+    { url = "https://files.pythonhosted.org/packages/db/94/65d8d73ee69e3934221aff6a5384a5eaf76f583450aa33573563f41e03e3/falcon-4.1.0-cp313-cp313-win_amd64.whl", hash = "sha256:e3fefde1f590fff4ccd404dd932f10c9b91b42a1735e8205aa7551432a5e870a", size = 405271, upload-time = "2025-08-06T16:19:36.223Z" },
+    { url = "https://files.pythonhosted.org/packages/91/36/ee359d6d8d201ddafd124919ec65432d48796e4181537c991e9b1cb70a15/falcon-4.1.0-py3-none-any.whl", hash = "sha256:07cb9690525fd69ca48bcf52dca8f32cff823564e89f3d0a04a2674c4c598176", size = 323157, upload-time = "2025-08-06T16:08:18.421Z" },
+]
+
+[[package]]
 name = "graphdbprocessorpy"
 version = "0.0.1"
 source = { path = "../Processorrepo/GraphdbProcessorPy/dist/graphdbprocessorpy-0.0.1.tar.gz" }
@@ -162,6 +202,58 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f2/97/ebf4da567aa6827c909642694d71c9fcf53e5b504f2d96afea02718862f3/iniconfig-2.1.0.tar.gz", hash = "sha256:3abbd2e30b36733fee78f9c7f7308f2d0050e88f0087fd25c2645f63c773e1c7", size = 4793, upload-time = "2025-03-19T20:09:59.721Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2c/e1/e6716421ea10d38022b952c159d5161ca1193197fb744506875fbb87ea7b/iniconfig-2.1.0-py3-none-any.whl", hash = "sha256:9deba5723312380e77435581c6bf4935c94cbfab9b1ed33ef8d238ea168eb760", size = 6050, upload-time = "2025-03-19T20:10:01.071Z" },
+]
+
+[[package]]
+name = "jsonpath-python"
+version = "1.0.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b5/49/e582e50b0c54c1b47e714241c4a4767bf28758bf90212248aea8e1ce8516/jsonpath-python-1.0.6.tar.gz", hash = "sha256:dd5be4a72d8a2995c3f583cf82bf3cd1a9544cfdabf2d22595b67aff07349666", size = 18121, upload-time = "2022-03-14T02:35:01.877Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/16/8a/d63959f4eff03893a00e6e63592e3a9f15b9266ed8e0275ab77f8c7dbc94/jsonpath_python-1.0.6-py3-none-any.whl", hash = "sha256:1e3b78df579f5efc23565293612decee04214609208a2335884b3ee3f786b575", size = 7552, upload-time = "2022-03-14T02:34:59.754Z" },
+]
+
+[[package]]
+name = "morph-kgc"
+version = "2.9.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "duckdb" },
+    { name = "elementpath" },
+    { name = "falcon" },
+    { name = "jsonpath-python" },
+    { name = "pandas" },
+    { name = "pyoxigraph" },
+    { name = "rdflib" },
+    { name = "ruamel-yaml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6f/00/faae6bf7e92766e10f9d340a258e09e50d11144bbfd3faeea9f99ef1b8fd/morph_kgc-2.9.0.tar.gz", hash = "sha256:39d06525b74449b7377372c702456063b9886676c0466f14ed489ef8a9f65952", size = 244842, upload-time = "2025-08-26T09:46:37.688Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/c9/bae28fc0f33b915df7319f8f24da74982896bc1b823224ab58c045009544/morph_kgc-2.9.0-py3-none-any.whl", hash = "sha256:28e7fe8b2bd26cc29c3ade88a0032b5562274ac61a1b1ef6e9fc41cfc97791d0", size = 70343, upload-time = "2025-08-26T09:46:36.201Z" },
+]
+
+[[package]]
+name = "morphkgcprocessorpy"
+version = "0.0.1"
+source = { path = "../Processorrepo/MorphKGCProcessorPy/dist/morphkgcprocessorpy-0.0.1.tar.gz" }
+dependencies = [
+    { name = "morph-kgc" },
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
+    { name = "rdfc-proto" },
+    { name = "rdfc-runner" },
+    { name = "rdflib" },
+]
+sdist = { hash = "sha256:de6a9891f2f7dbe44aa4a5615f003f6a4207e758a7acde806f8a8d8943c91f18" }
+
+[package.metadata]
+requires-dist = [
+    { name = "morph-kgc", specifier = ">=2.9.0" },
+    { name = "pytest", specifier = ">=8.4.1" },
+    { name = "pytest-asyncio", specifier = ">=1.1.0" },
+    { name = "rdfc-proto", specifier = ">=0.0.1" },
+    { name = "rdfc-runner", specifier = ">=0.0.3" },
+    { name = "rdflib", specifier = ">=7.2.0" },
 ]
 
 [[package]]
@@ -328,6 +420,22 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz", hash = "sha256:636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887", size = 4968631, upload-time = "2025-06-21T13:39:12.283Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c7/21/705964c7812476f378728bdf590ca4b771ec72385c533964653c68e86bdc/pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b", size = 1225217, upload-time = "2025-06-21T13:39:07.939Z" },
+]
+
+[[package]]
+name = "pyoxigraph"
+version = "0.3.22"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/68/14/33446bc01926701595b0890811f96ab941fd61e89f257ae262368a3b90c5/pyoxigraph-0.3.22.tar.gz", hash = "sha256:430b18cb3cec37b8c71cee0f70ea10601b9e479f1b8c364861660ae9f8629fd9", size = 4306498, upload-time = "2023-12-01T14:37:34.573Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/01/6b/7bcebf6e590db0384cb56b0ac76385cea3b51ea37170da849214d1d9b1cf/pyoxigraph-0.3.22-cp37-abi3-macosx_10_14_x86_64.macosx_11_0_arm64.macosx_10_14_universal2.whl", hash = "sha256:32d5630c9fb3d7b819a25401b3afdbd01dbfc9624b1519d41216622fe3af52e6", size = 10561197, upload-time = "2023-12-01T15:17:42.567Z" },
+    { url = "https://files.pythonhosted.org/packages/4d/05/141746d5b1a8e6210613317d6cb772ab5bfe931a3ebdb98a92fa6ed59c39/pyoxigraph-0.3.22-cp37-abi3-macosx_10_14_x86_64.whl", hash = "sha256:6368f24bc236a6055171f4a80cb63b9ad76fcbdbcb4a3ef981eb6d86d8975c11", size = 5478410, upload-time = "2023-12-01T15:17:45.497Z" },
+    { url = "https://files.pythonhosted.org/packages/15/ef/85854115c9a8a08eea3d9e46317ca9774566dacd33964b41acd30a8156cd/pyoxigraph-0.3.22-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:821e1103cf1e8f12d0738cf1b2625c8374758e33075ca67161ead3669f53e4cb", size = 5092580, upload-time = "2023-12-01T15:17:48.102Z" },
+    { url = "https://files.pythonhosted.org/packages/7f/96/ad8b73eb8c649a089d07cbe323034e8d09cdabcdab44194786c4c2faee28/pyoxigraph-0.3.22-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:630f1090d67d1199c86f358094289816e0c00a21000164cfe06499c8689f8b9e", size = 6493664, upload-time = "2023-12-01T17:54:12.064Z" },
+    { url = "https://files.pythonhosted.org/packages/a9/08/a185a89bf7832e7377b0d9c961073731c0e5e13beaf2b91d93adaec13baa/pyoxigraph-0.3.22-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1aca511243209005da32470bbfec9e023ac31095bbeaa8cedabe0a652adce38c", size = 6816344, upload-time = "2023-12-01T14:48:57.322Z" },
+    { url = "https://files.pythonhosted.org/packages/45/b4/37f7114c4a21b1ee210505e953fdda533b6ff9a458570905ebfe53588cf2/pyoxigraph-0.3.22-cp37-abi3-musllinux_1_1_aarch64.whl", hash = "sha256:ab329df388865afa9a934f1eac2e75264b220962a21bbcded6cb7ead96d1f1dd", size = 6940281, upload-time = "2023-12-04T11:52:02.933Z" },
+    { url = "https://files.pythonhosted.org/packages/91/d3/7bff379c8075bb46301c29027e355f8a6f6388252e8626636619c2dbca19/pyoxigraph-0.3.22-cp37-abi3-musllinux_1_1_x86_64.whl", hash = "sha256:60b7f13331b91827e2edfa8633ffb7e3bfc8630b708578fb0bc8d43c76754f20", size = 7308086, upload-time = "2023-12-01T15:05:51.979Z" },
+    { url = "https://files.pythonhosted.org/packages/9d/7d/dd2d8c606633c2da157e7dd5a7c92b7bfdef1866bd4f382763ff17454431/pyoxigraph-0.3.22-cp37-abi3-win_amd64.whl", hash = "sha256:9a4ffd8ce28c3e8ce888662e0d9e9155e5226ecd8cd967f3c46391cf266c4c1d", size = 4716868, upload-time = "2023-12-01T14:51:37.776Z" },
 ]
 
 [[package]]
@@ -511,6 +619,36 @@ requires-dist = [
 ]
 
 [[package]]
+name = "ruamel-yaml"
+version = "0.18.15"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "ruamel-yaml-clib", marker = "platform_python_implementation == 'CPython'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3e/db/f3950f5e5031b618aae9f423a39bf81a55c148aecd15a34527898e752cf4/ruamel.yaml-0.18.15.tar.gz", hash = "sha256:dbfca74b018c4c3fba0b9cc9ee33e53c371194a9000e694995e620490fd40700", size = 146865, upload-time = "2025-08-19T11:15:10.694Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/e5/f2a0621f1781b76a38194acae72f01e37b1941470407345b6e8653ad7640/ruamel.yaml-0.18.15-py3-none-any.whl", hash = "sha256:148f6488d698b7a5eded5ea793a025308b25eca97208181b6a026037f391f701", size = 119702, upload-time = "2025-08-19T11:15:07.696Z" },
+]
+
+[[package]]
+name = "ruamel-yaml-clib"
+version = "0.2.14"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/e9/39ec4d4b3f91188fad1842748f67d4e749c77c37e353c4e545052ee8e893/ruamel.yaml.clib-0.2.14.tar.gz", hash = "sha256:803f5044b13602d58ea378576dd75aa759f52116a0232608e8fdada4da33752e", size = 225394, upload-time = "2025-09-22T19:51:23.753Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d7/ae/e3811f05415594025e96000349d3400978adaed88d8f98d494352d9761ee/ruamel.yaml.clib-0.2.14-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:7e4f9da7e7549946e02a6122dcad00b7c1168513acb1f8a726b1aaf504a99d32", size = 269205, upload-time = "2025-09-23T14:24:15.06Z" },
+    { url = "https://files.pythonhosted.org/packages/72/06/7d51f4688d6d72bb72fa74254e1593c4f5ebd0036be5b41fe39315b275e9/ruamel.yaml.clib-0.2.14-cp313-cp313-macosx_15_0_arm64.whl", hash = "sha256:dd7546c851e59c06197a7c651335755e74aa383a835878ca86d2c650c07a2f85", size = 137417, upload-time = "2025-09-22T19:50:59.82Z" },
+    { url = "https://files.pythonhosted.org/packages/5a/08/b4499234a420ef42960eeb05585df5cc7eb25ccb8c980490b079e6367050/ruamel.yaml.clib-0.2.14-cp313-cp313-manylinux2014_aarch64.whl", hash = "sha256:1c1acc3a0209ea9042cc3cfc0790edd2eddd431a2ec3f8283d081e4d5018571e", size = 642558, upload-time = "2025-09-22T19:51:03.388Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/ba/1975a27dedf1c4c33306ee67c948121be8710b19387aada29e2f139c43ee/ruamel.yaml.clib-0.2.14-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2070bf0ad1540d5c77a664de07ebcc45eebd1ddcab71a7a06f26936920692beb", size = 744087, upload-time = "2025-09-22T19:51:00.897Z" },
+    { url = "https://files.pythonhosted.org/packages/20/15/8a19a13d27f3bd09fa18813add8380a29115a47b553845f08802959acbce/ruamel.yaml.clib-0.2.14-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:9bd8fe07f49c170e09d76773fb86ad9135e0beee44f36e1576a201b0676d3d1d", size = 699709, upload-time = "2025-09-22T19:51:02.075Z" },
+    { url = "https://files.pythonhosted.org/packages/19/ee/8d6146a079ad21e534b5083c9ee4a4c8bec42f79cf87594b60978286b39a/ruamel.yaml.clib-0.2.14-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:ff86876889ea478b1381089e55cf9e345707b312beda4986f823e1d95e8c0f59", size = 708926, upload-time = "2025-09-23T18:42:51.707Z" },
+    { url = "https://files.pythonhosted.org/packages/a9/f5/426b714abdc222392e68f3b8ad323930d05a214a27c7e7a0f06c69126401/ruamel.yaml.clib-0.2.14-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:1f118b707eece8cf84ecbc3e3ec94d9db879d85ed608f95870d39b2d2efa5dca", size = 740202, upload-time = "2025-09-22T19:51:04.673Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/ac/3c5c2b27a183f4fda8a57c82211721c016bcb689a4a175865f7646db9f94/ruamel.yaml.clib-0.2.14-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:b30110b29484adc597df6bd92a37b90e63a8c152ca8136aad100a02f8ba6d1b6", size = 765196, upload-time = "2025-09-22T19:51:05.916Z" },
+    { url = "https://files.pythonhosted.org/packages/92/2e/06f56a71fd55021c993ed6e848c9b2e5e9cfce180a42179f0ddd28253f7c/ruamel.yaml.clib-0.2.14-cp313-cp313-win32.whl", hash = "sha256:f4e97a1cf0b7a30af9e1d9dad10a5671157b9acee790d9e26996391f49b965a2", size = 98635, upload-time = "2025-09-22T19:51:08.183Z" },
+    { url = "https://files.pythonhosted.org/packages/51/79/76aba16a1689b50528224b182f71097ece338e7a4ab55e84c2e73443b78a/ruamel.yaml.clib-0.2.14-cp313-cp313-win_amd64.whl", hash = "sha256:090782b5fb9d98df96509eecdbcaffd037d47389a89492320280d52f91330d78", size = 115238, upload-time = "2025-09-22T19:51:07.081Z" },
+]
+
+[[package]]
 name = "setuptools"
 version = "80.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -621,6 +759,7 @@ source = { editable = "." }
 dependencies = [
     { name = "csvpreprocessorpy" },
     { name = "graphdbprocessorpy" },
+    { name = "morphkgcprocessorpy" },
     { name = "prettifyprocessorpy" },
     { name = "printprocessorpy" },
     { name = "rdf2tssprocssorpy" },
@@ -634,6 +773,7 @@ dependencies = [
 requires-dist = [
     { name = "csvpreprocessorpy", path = "../Processorrepo/CSVpreProcessorPy/dist/csvpreprocessorpy-0.0.1.tar.gz" },
     { name = "graphdbprocessorpy", path = "../Processorrepo/GraphdbProcessorPy/dist/graphdbprocessorpy-0.0.1.tar.gz" },
+    { name = "morphkgcprocessorpy", path = "../Processorrepo/MorphKGCProcessorPy/dist/morphkgcprocessorpy-0.0.1.tar.gz" },
     { name = "prettifyprocessorpy", path = "../Processorrepo/PrettifyProcessorPy/dist/prettifyprocessorpy-0.0.1.tar.gz" },
     { name = "printprocessorpy", path = "../Processorrepo/PrintProcessorPy/dist/printprocessorpy-0.0.1.tar.gz" },
     { name = "rdf2tssprocssorpy", path = "../Processorrepo/RDF2TSSProcssorPy/dist/rdf2tssprocssorpy-0.0.1.tar.gz" },
