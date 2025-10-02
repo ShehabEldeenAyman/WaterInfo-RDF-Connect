@@ -45,7 +45,10 @@ file_path: temp_data.csv
     async def transform(self) -> None:
         async for msg in self.args.reader.strings():
             self.write_temp_file(msg)
-
+            self.finalGraph = self.materialize()
+            self.clear_temp_file()
+            await self.args.writer.string(self.finalGraph.serialize(format="turtle"))
+            await self.args.writer.close()
 
 
     async def produce(self) -> None:

@@ -13,6 +13,8 @@ dependencies = [
     "pytest-asyncio>=1.1.0",
     "rdfc-proto>=0.0.1",
     "rdfc-runner>=0.0.3",
+    "rdflib>=7.2.0",
+    "morph-kgc>=2.9.0"
 ]
 
 [project.urls]
