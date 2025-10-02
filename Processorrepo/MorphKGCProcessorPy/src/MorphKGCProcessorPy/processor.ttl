@@ -23,4 +23,11 @@ rdfc:MorphKGCProcessorPy rdfc:pyImplementationOf rdfc:Processor;
         sh:name "writer";
         sh:minCount 0;
         sh:maxCount 1;
+    ],
+    [
+        sh:datatype xsd:string;
+        sh:path rdfc:loc;
+        sh:name "loc";
+        sh:minCount 1;
+        sh:maxCount 1;
     ].

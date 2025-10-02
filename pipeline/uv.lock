@@ -244,7 +244,7 @@ dependencies = [
     { name = "rdfc-runner" },
     { name = "rdflib" },
 ]
-sdist = { hash = "sha256:15a03d72a941180bfac7feed88b890bdf4b3f2a281a7f69fe505aea3eda838b8" }
+sdist = { hash = "sha256:87e4835745465f75decf91b879b1de0389a711094568446e52672562f18aaad9" }
 
 [package.metadata]
 requires-dist = [

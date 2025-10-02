@@ -13,6 +13,7 @@ from rdfc_runner import Processor, ProcessorArgs, Reader, Writer
 class TemplateArgs(ProcessorArgs):
     reader: Reader
     writer: Writer
+    loc: str
 
 
 # --- Processor Implementation ---
@@ -23,7 +24,7 @@ class MorphKGCProcessorPy(Processor[TemplateArgs]):
         super().__init__(args)
         self.clear_temp_file()
         self.finalGraph: Graph | None = None
-        self.config_str = """
+        self.config_str = f"""
 [DEFAULT]
 main_dir: ./
 
@@ -31,7 +32,7 @@ main_dir: ./
 output_file: knowledge-graph.ttl
 
 [DataSource1]
-mappings: ./WFresources/KGCMapping.rml.ttl
+mappings: {self.args.loc}
 file_path: temp_data.csv
 """
 

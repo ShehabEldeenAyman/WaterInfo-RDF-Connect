@@ -86,6 +86,7 @@
 
 <kgcmapper> a rdfc:MorphKGCProcessorPy;
   rdfc:reader <CSVFile>;
+  rdfc:loc "./WFresources/KGCMapping.rml.ttl";
   rdfc:writer <alreadymappedData>.
 
 #//////////////////////////////////////
