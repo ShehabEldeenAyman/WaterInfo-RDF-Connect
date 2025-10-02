@@ -17,7 +17,8 @@
   <./.venv/lib/python3.13/site-packages/SHACLvalidatePy/processor.ttl>,
   <./.venv/lib/python3.13/site-packages/RDF2TSSProcssorPy/processor.ttl>,
   <./.venv/lib/python3.13/site-packages/TSS2RDFProcessorPy/processor.ttl>,
-  <./.venv/lib/python3.13/site-packages/GraphdbProcessorPy/processor.ttl>
+  <./.venv/lib/python3.13/site-packages/GraphdbProcessorPy/processor.ttl>,
+  <./.venv/lib/python3.13/site-packages/MorphKGCProcessorPy/processor.ttl>
 
   # <./node_modules/@rdfc/shacl-processor-ts/processors.ttl>
 
@@ -60,7 +61,8 @@
      [
        rdfc:instantiates rdfc:PyRunner; #runners for lgoic written in python
        rdfc:processor
-       <rmlmapper>,
+       #<rmlmapper>,
+       <kgcmapper> ,
        <prettify>,
       <fileSaver>,
       <customSHACL>,
@@ -82,10 +84,15 @@
   rdfc:output <CSVFile>
   .
 
+<kgcmapper> a rdfc:MorphKGCProcessorPy;
+  rdfc:reader <CSVFile>;
+  rdfc:writer <alreadymappedData>.
 
-<rmlmapper> a rdfc:RmlProcessorPy;
-  rdfc:writer <alreadymappedData>;
-  rdfc:mappingFile "./WFresources/NewMapping.rml.ttl".
+#//////////////////////////////////////
+# <rmlmapper> a rdfc:RmlProcessorPy;
+#   rdfc:writer <alreadymappedData>;
+#   rdfc:mappingFile "./WFresources/NewMapping.rml.ttl".
+#//////////////////////////////////////
 
 # Processor to validate the output RDF with SHACL
 # <validator> a rdfc:Validate;

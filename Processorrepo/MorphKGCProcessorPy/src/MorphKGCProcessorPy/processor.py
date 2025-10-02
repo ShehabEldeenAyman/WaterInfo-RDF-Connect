@@ -31,7 +31,7 @@ main_dir: ./
 output_file: knowledge-graph.ttl
 
 [DataSource1]
-mappings: NewMapping.rml.ttl
+mappings: ./WFresources/KGCMapping.rml.ttl
 file_path: temp_data.csv
 """
 
@@ -56,14 +56,13 @@ file_path: temp_data.csv
 
 ########################################################################################
     def clear_temp_file(self) -> None:
-        outfile = open("./temp_data.csv", "wb")
-        outfile.close()
+        with open("./temp_data.csv", "w", encoding="utf-8") as outfile:
+            pass
 
     def write_temp_file(self,msg) -> None:
         # Open the destination file
-        outfile = open("temp_data.csv", "ab")
-        outfile.write(msg)
-        outfile.close()
+        with open("temp_data.csv", "a", encoding="utf-8") as outfile:
+            outfile.write(msg)
     
     def materialize(self):
         graph = Graph()
