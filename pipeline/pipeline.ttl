@@ -1,6 +1,8 @@
 @prefix rdfc: <https://w3id.org/rdf-connect#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix ex: <http://example.com/>.
+@prefix tree: <https://w3id.org/tree#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
 
 
 ### Import runners and processors
@@ -18,7 +20,8 @@
   <./.venv/lib/python3.13/site-packages/RDF2TSSProcssorPy/processor.ttl>,
   <./.venv/lib/python3.13/site-packages/TSS2RDFProcessorPy/processor.ttl>,
   <./.venv/lib/python3.13/site-packages/GraphdbProcessorPy/processor.ttl>,
-  <./.venv/lib/python3.13/site-packages/MorphKGCProcessorPy/processor.ttl>
+  <./.venv/lib/python3.13/site-packages/MorphKGCProcessorPy/processor.ttl>,
+  <./node_modules/@rdfc/sds-processors-ts/configs/sdsify.ttl>
 
   # <./node_modules/@rdfc/shacl-processor-ts/processors.ttl>
 
@@ -41,6 +44,8 @@
 <reportchannel> a rdfc:Reader, rdfc:Writer.
 <RDF2TSSchannel> a rdfc:Reader, rdfc:Writer.
 <TSS2RDFchannel> a rdfc:Reader, rdfc:Writer.
+<sdsifychannel>a rdfc:Reader, rdfc:Writer.
+<prettyData2> a rdfc:Reader, rdfc:Writer.
 
 ### Define the pipeline
 <> a rdfc:Pipeline;
@@ -49,7 +54,8 @@
        rdfc:processor <fileReader>,
       #  ,<mappingReader> 
          #<logger>,
-         <shapeReader>
+         <shapeReader>,
+         <sdsify>
         #<validator>
        ;
    ], 
@@ -72,6 +78,7 @@
       <TSS2RDF>,
       <RDFSaver>,
       <GraphDB>
+      #<prettify2>
       #<SHACLReportSaver>
       #<PreProcessor> 
        ;
@@ -153,8 +160,20 @@
   rdfc:reader <RDF2TSSchannel>;
   rdfc:loc "./WFresources/generated/TSS_data.ttl". 
 
+<sdsify> a rdfc:Sdsify;
+rdfc:input <validated>;
+rdfc:output <sdsifychannel>;
+rdfc:stream <http://example.com/observationsStream>;
+rdfc:typeFilter sosa:Observation;
+rdfc:timestampPath sosa:resultTime.
+
+# <prettify2> a rdfc:PrettifyProcessorPy;
+#     rdfc:reader <sdsifychannel>;
+#     rdfc:writer <prettyData2>.
+
 <RDFSaver> a rdfc:PrintProcessorPy;
-  rdfc:reader <TSS2RDFchannel>;
+  #rdfc:reader <TSS2RDFchannel>;
+  rdfc:reader <sdsifychannel>;
   rdfc:loc "./WFresources/generated/RDF_data.ttl". 
 
 <GraphDB> a rdfc:GraphdbProcessorPy;

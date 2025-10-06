@@ -12,7 +12,7 @@
 
 <#SensorMapping> a rr:TriplesMap ;
   rml:logicalSource [
-    rml:source "sample_data.csv" ;
+    rml:source "temp_data.csv" ;
     rml:referenceFormulation ql:CSV
   ] ;
 

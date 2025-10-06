@@ -37,6 +37,7 @@
     rr:predicate sosa:hasSimpleResult ;
     rr:objectMap [
       rml:reference "Value" ;
+      rr:template "{Value}" ;
       rr:datatype xsd:double
     ]
   ] ;
