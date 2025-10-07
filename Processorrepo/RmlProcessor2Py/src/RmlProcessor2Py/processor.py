@@ -51,27 +51,9 @@ class RmlProcessor2Py(Processor[TemplateArgs]):
 ###############################################################################################################
     def mapdata(self):
         command = ["java", "-jar", "rmlmapper.jar", "-m", self.args.mappingFile, "-o", "./WFresources/generatedRDF.ttl"] #newMapping.rml.ttl
-
         # Run the process synchronously
         process = subprocess.run(command, capture_output=True, text=True)
-
         return process
-        # file_output = ''
-        #if process.returncode == 0:
-
-        #     # Regular file read (synchronous)
-        #     with open('temp.ttl', 'r') as f:
-        #         file_output = f.read()
-
-        # # Write output if writer exists
-        # if self.args.writer:
-        #     self.args.writer.string(file_output)
-
-        # # Close the writer after processing all messages
-        # if self.args.writer:
-        #     self.args.writer.close()
-
-        # self.logger.debug("done reading RmlProcessorPy so closed writer.")
 
     def write_temp_CSV_file(self,msg) -> None:
         # Open the destination file
