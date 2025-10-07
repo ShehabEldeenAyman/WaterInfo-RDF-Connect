@@ -21,7 +21,7 @@ class RmlProcessor2Py(Processor[TemplateArgs]):
 
     def __init__(self, args: TemplateArgs):
         super().__init__(args)
-        self.logger.debug(msg="Created TemplateProcessor with args: {}".format(args))
+        self.write_temp_file
 
     async def init(self) -> None:
 
@@ -60,5 +60,9 @@ class RmlProcessor2Py(Processor[TemplateArgs]):
 
     def write_temp_file(self,msg) -> None:
         # Open the destination file
-        with open("temp_data.csv", "a", encoding="utf-8") as outfile:
+        with open("./WFresources/temp_data.csv", "a", encoding="utf-8") as outfile:
             outfile.write(msg)
+
+    def clear_temp_file(self) -> None:
+        with open("./WFresources/temp_data.csv", "w", encoding="utf-8") as outfile:
+            pass
