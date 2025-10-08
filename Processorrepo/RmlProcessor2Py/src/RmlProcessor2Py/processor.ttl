@@ -10,7 +10,7 @@ rdfc:RmlProcessor2Py rdfc:pyImplementationOf rdfc:Processor;
     rdfc:class "RmlProcessor2Py".
 
 [ ] a sh:NodeShape;
-    sh:targetClass rdfc:RmlProcessorPy;
+    sh:targetClass rdfc:RmlProcessor2Py;
     sh:property [
         sh:class rdfc:Reader;
         sh:path rdfc:reader;

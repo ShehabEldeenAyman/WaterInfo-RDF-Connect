@@ -34,13 +34,15 @@ class RmlProcessor2Py(Processor[TemplateArgs]):
             process = self.mapdata()
             if process.returncode == 0:
                 self.finalGraph = self.read_temp_RDF_file()
+                print("mapping process returned positive code")
                 await self.args.writer.string(self.finalGraph)
 
             else:
+                print("mapping process returned negative code")
                 await self.args.writer.string('error')
 
-        self.delete_temp_CSV_file()
-        self.delete_temp_RDF_file()
+        #self.delete_temp_CSV_file()
+        #self.delete_temp_RDF_file()
         await self.args.writer.close()
 
 
