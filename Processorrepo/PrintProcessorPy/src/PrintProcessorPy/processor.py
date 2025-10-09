@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from logging import getLogger, Logger
 import aiofiles
 from rdfc_runner import Processor, ProcessorArgs, Reader, Writer
+from datetime import datetime
 import asyncio
 
 
@@ -44,6 +45,10 @@ class PrintProcessorPy(Processor[TemplateArgs]):
 
                     # Log the incoming message (use info or logger.log with level param)
                     self.logger.info(text)
+
+                    # Prepend timestamp to each message
+                    timestamp = datetime.now().isoformat()
+                    text = f"{timestamp} - {text}\n"
 
                     # Write and flush asynchronously
                     await af.write(text)
