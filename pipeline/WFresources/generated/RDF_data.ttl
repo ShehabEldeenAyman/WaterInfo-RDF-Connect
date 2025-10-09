@@ -245,3 +245,355 @@ _:df_4_22 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536
 <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
 <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
 <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_23 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A07%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_23 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_23 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:07:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_24 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A07%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_24 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_24 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.812e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A07%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:07:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_25 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A08%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_25 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_25 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:08:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_26 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A08%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_26 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_26 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:08:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_27 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A08%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_27 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_27 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.812e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A08%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:08:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_28 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A09%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_28 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_28 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:09:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_29 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A09%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_29 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_29 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:09:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_30 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A09%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_30 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_30 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.812e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A09%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:09:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_31 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A10%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_31 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_31 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:10:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_32 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A10%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_32 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_32 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:10:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_33 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A10%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_33 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_33 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.812e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A10%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:10:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_34 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A11%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_34 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_34 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:11:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_35 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A11%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_35 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_35 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:11:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_36 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A11%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_36 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_36 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.812e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A11%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:11:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_37 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A12%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_37 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_37 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:12:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_38 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A12%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_38 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_38 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:12:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_39 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A12%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_39 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_39 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.812e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A12%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:12:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_40 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A13%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_40 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_40 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:13:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_41 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A13%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_41 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_41 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:13:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_42 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A13%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_42 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_42 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.8119e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A13%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:13:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_43 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A14%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_43 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_43 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:14:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_44 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A14%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_44 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_44 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:14:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_45 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A14%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_45 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_45 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.8119e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A14%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:14:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_46 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A15%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_46 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_46 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:15:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_47 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A15%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_47 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_47 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:15:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_48 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A15%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_48 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_48 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.812e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:15:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_49 <https://w3id.org/sds#payload> <http://example.com/reading_78124042_2025-08-12T12%3A15%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_49 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_49 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_78124042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_78124042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 1.01049e+03 .
+<http://example.com/reading_78124042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "78124042" .
+<http://example.com/reading_78124042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "Barometric pressure" .
+<http://example.com/reading_78124042_2025-08-12T12%3A15%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:15:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_50 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A16%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_50 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_50 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:16:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_51 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A16%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_51 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_51 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:16:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_52 <https://w3id.org/sds#payload> <http://example.com/reading_27332042_2025-08-12T12%3A16%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_52 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_52 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_27332042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_27332042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 8.812e+01 .
+<http://example.com/reading_27332042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "27332042" .
+<http://example.com/reading_27332042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_27332042_2025-08-12T12%3A16%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:16:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_53 <https://w3id.org/sds#payload> <http://example.com/reading_24002042_2025-08-12T12%3A17%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_53 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_53 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24002042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24002042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.454e+01 .
+<http://example.com/reading_24002042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24002042" .
+<http://example.com/reading_24002042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24002042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:17:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_54 <https://w3id.org/sds#payload> <http://example.com/reading_24039042_2025-08-12T12%3A17%3A00%2B00%3A00> <https://w3id.org/sds#DataDescription> .
+_:df_4_54 <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .
+_:df_4_54 <https://w3id.org/sds#bucket> <root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#DataDescription> .
+<http://example.com/reading_24039042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<http://example.com/reading_24039042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/hasSimpleResult> 3.462e+01 .
+<http://example.com/reading_24039042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/madeBySensor> "24039042" .
+<http://example.com/reading_24039042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/observedProperty> "River Stage" .
+<http://example.com/reading_24039042_2025-08-12T12%3A17%3A00%2B00%3A00> <http://www.w3.org/ns/sosa/resultTime> "2025-08-12T12:17:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/sds#Bucket> <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#immutable> "false" <https://w3id.org/sds#DataDescription> .
+<root/2025-01-01T00%3A00%3A00.000Z_31536000000_0/> <https://w3id.org/sds#stream> <https://w3id.org/sds#Stream> <https://w3id.org/sds#DataDescription> .

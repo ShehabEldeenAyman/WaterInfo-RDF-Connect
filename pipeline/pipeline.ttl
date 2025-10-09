@@ -24,7 +24,9 @@
   <./.venv/lib/python3.13/site-packages/RmlProcessor2Py/processor.ttl>,
 
   <./node_modules/@rdfc/sds-processors-ts/configs/sdsify.ttl>,
-  <./node_modules/@rdfc/sds-processors-ts/configs/bucketizer.ttl>
+  <./node_modules/@rdfc/sds-processors-ts/configs/bucketizer.ttl>,
+  <./node_modules/@rdfc/sds-processors-ts/configs/ldes_disk_writer.ttl>
+
 
   # <./node_modules/@rdfc/shacl-processor-ts/processors.ttl>
 
@@ -63,7 +65,8 @@
          <shapeReader>,
          <sdsify>,
          <metadataReader>,
-         <bucketizer>
+         <bucketizer>,
+         <diskwriter>
         #<validator>
        ;
    ], 
@@ -206,7 +209,10 @@ rdfc:timestampPath sosa:resultTime.
     rdfc:outputStreamId <https://w3id.org/sds#Stream>;
     rdfc:prefix "root/".                  
 
-
+<diskwriter> a rdfc:LdesDiskWriter;
+    rdfc:dataInput <bucketized>;
+    rdfc:metadataInput <bucketizedMetadata>;
+    rdfc:directory "./WFresources/generated".
 
 
 
