@@ -69,7 +69,7 @@ ex:Node_2025 a tree:Node ;
   tree:member <http://example.com/reading_24002042_2025-08-12T12%3A02%3A00%2B00%3A00> .
 
 #################################################################
-# SHACL shape: describes the structure of a SOSA observation in this stream
+# SHACL shape
 #################################################################
 
 ex:ObservationShape a sh:NodeShape ;
