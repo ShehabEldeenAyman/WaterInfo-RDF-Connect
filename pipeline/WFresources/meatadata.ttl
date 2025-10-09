@@ -1,0 +1,129 @@
+@prefix ex: <http://example.com/meta/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix tree: <https://w3id.org/tree#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sds: <https://w3id.org/sds#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Simple metadata for SOSA observations with per-year page bucketization
+# - timestampPath: sosa:resultTime
+# - bucketization: one TREE node (page) per calendar year (UTC)
+#################################################################
+
+# DCAT dataset (discovery)
+ex:ObservationsDataset a dcat:Dataset ;
+  rdfs:label "River stage observations (example)" ;
+  dcat:description "A small example dataset describing SOSA observations bucketized per-year." ;
+  dcat:identifier <http://example.com/observations> .
+
+# LDES / stream entry (points to the timestamp path used for fragmentation)
+ex:ObservationsStream a ldes:EventStream ;
+  rdfs:label "Example LDES of SOSA Observations" ;
+  ldes:timestampPath sosa:resultTime ;
+  sds:dataset ex:ObservationsDataset .
+
+# TREE Collection describing the paginated view (one page per calendar day)
+ex:ObservationsCollection a tree:Collection ;
+  rdfs:label "Observations paginated by day (UTC)" ;
+  tree:shape ex:ObservationShape ;
+  tree:view ex:NodeRoot .
+
+# Root node (entry point) - contains relations to day pages
+ex:NodeRoot a tree:Node ;
+  rdfs:comment "Root node that points to per-year pages. Each relation encodes the year's [>= start && < nextStart] interval." ;
+  tree:relation ex:R_2024 ;
+  tree:relation ex:R_2025 .
+
+# Relation for 2025 (members with resultTime >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z)
+# Relation for 2024 (members with resultTime >= 2024-01-01T00:00:00Z and < 2025-01-01T00:00:00Z)
+ex:R_2024 a tree:GreaterThanOrEqualToRelation ;
+  tree:node ex:Node_2024 ;
+  tree:path sosa:resultTime ;
+  tree:value "2024-01-01T00:00:00+00:00"^^xsd:dateTime .
+ex:R_2024_up a tree:LessThanRelation ;
+  tree:node ex:Node_2024 ;
+  tree:path sosa:resultTime ;
+  tree:value "2025-01-01T00:00:00+00:00"^^xsd:dateTime .
+
+# Relation for 2025 (members with resultTime >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z)
+ex:R_2025 a tree:GreaterThanOrEqualToRelation ;
+  tree:node ex:Node_2025 ;
+  tree:path sosa:resultTime ;
+  tree:value "2025-01-01T00:00:00+00:00"^^xsd:dateTime .
+ex:R_2025_up a tree:LessThanRelation ;
+  tree:node ex:Node_2025 ;
+  tree:path sosa:resultTime ;
+  tree:value "2026-01-01T00:00:00+00:00"^^xsd:dateTime .
+
+# Node (page) for 2025-08-12: contains the sample member(s)
+ex:Node_2024 a tree:Node ;
+  rdfs:label "Page: 2024 (UTC)" .
+
+ex:Node_2025 a tree:Node ;
+  rdfs:label "Page: 2025 (UTC)" ;
+  tree:member <http://example.com/reading_24002042_2025-08-12T12%3A02%3A00%2B00%3A00> .
+
+#################################################################
+# SHACL shape: describes the structure of a SOSA observation in this stream
+#################################################################
+
+ex:ObservationShape a sh:NodeShape ;
+  sh:targetClass sosa:Observation ;
+  rdfs:comment "Minimal shape for the observations used in the example stream." ;
+  
+  # hasSimpleResult -> numeric value
+  sh:property [
+    sh:path sosa:hasSimpleResult ;
+    sh:datatype xsd:double ;
+    sh:minCount 1 ;
+    sh:description "Measured numeric value (required)." ;
+  ] ;
+  
+  # madeBySensor -> a sensor identifier (literal in your sample)
+  sh:property [
+    sh:path sosa:madeBySensor ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:description "Sensor identifier (as used in the sample)." ;
+  ] ;
+  
+  # observedProperty -> what is being measured
+  sh:property [
+    sh:path sosa:observedProperty ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:description "Observed property (e.g., 'River Stage')." ;
+  ] ;
+  
+  # resultTime -> timestamp used for ordering and pagination
+  sh:property [
+    sh:path sosa:resultTime ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:description "Observation timestamp (used by ldes:timestampPath)." ;
+  ] .
+
+#################################################################
+# Example: show the actual member (repeated from your sample) included as a member
+#################################################################
+
+<http://example.com/reading_24002042_2025-08-12T12%3A02%3A00%2B00%3A00>
+  a sosa:Observation ;
+  sosa:hasSimpleResult 3.454e+01 ;
+  sosa:madeBySensor "24002042" ;
+  sosa:observedProperty "River Stage" ;
+  sosa:resultTime "2025-08-12T12:02:00+00:00"^^xsd:dateTime .
+
+#################################################################
+# Notes:
+# - This example implements a very simple per-year bucketization using TREE relations.
+# - A server implementing this metadata should create one tree:Node per-year (UTC) and
+#   ensure members are added to the node whose interval contains their sosa:resultTime.
+# - The ldes:timestampPath is set to sosa:resultTime so clients know which property
+#   to use for incremental harvesting.
+#################################################################

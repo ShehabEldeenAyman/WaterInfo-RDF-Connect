@@ -10,6 +10,7 @@ from rdfc_runner import Processor, ProcessorArgs, Reader, Writer
 @dataclass
 class TemplateArgs(ProcessorArgs):
     reader: Reader
+    type: str
     
 
 
@@ -43,8 +44,8 @@ class GraphdbProcessorPy(Processor[TemplateArgs]):
         REPOSITORY = " RDFconnect"  # replace with your repository name
         ENDPOINT = f"{GRAPHDB_BASE_URL}/repositories/{REPOSITORY}/statements"
         # HTTP headers
-        headers = {
-            "Content-Type": "text/turtle",  # Format of RDF data
+        headers = { #"text/turtle"
+            "Content-Type": self.args.type,  # Format of RDF data
         }
 
         try:

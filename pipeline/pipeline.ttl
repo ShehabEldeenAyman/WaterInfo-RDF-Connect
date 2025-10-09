@@ -23,7 +23,8 @@
   <./.venv/lib/python3.13/site-packages/MorphKGCProcessorPy/processor.ttl>,
   <./.venv/lib/python3.13/site-packages/RmlProcessor2Py/processor.ttl>,
 
-  <./node_modules/@rdfc/sds-processors-ts/configs/sdsify.ttl>
+  <./node_modules/@rdfc/sds-processors-ts/configs/sdsify.ttl>,
+  <./node_modules/@rdfc/sds-processors-ts/configs/bucketizer.ttl>
 
   # <./node_modules/@rdfc/shacl-processor-ts/processors.ttl>
 
@@ -48,6 +49,9 @@
 <TSS2RDFchannel> a rdfc:Reader, rdfc:Writer.
 <sdsifychannel>a rdfc:Reader, rdfc:Writer.
 <prettyData2> a rdfc:Reader, rdfc:Writer.
+<metadata> a rdfc:Reader, rdfc:Writer.
+<bucketized> a rdfc:Reader, rdfc:Writer.
+<bucketizedMetadata> a rdfc:Reader, rdfc:Writer.
 
 ### Define the pipeline
 <> a rdfc:Pipeline;
@@ -57,7 +61,9 @@
       #  ,<mappingReader> 
          #<logger>,
          <shapeReader>,
-         <sdsify>
+         <sdsify>,
+         <metadataReader>,
+         <bucketizer>
         #<validator>
        ;
    ], 
@@ -175,14 +181,50 @@ rdfc:stream <http://example.com/observationsStream>;
 rdfc:typeFilter sosa:Observation;
 rdfc:timestampPath sosa:resultTime.
 
+
+<metadataReader> a rdfc:GlobRead;
+    rdfc:glob <./WFresources/metadata.ttl>;
+    rdfc:output <metadata>;
+    rdfc:closeOnEnd false .
+
+
+<bucketizer> a rdfc:Bucketize;
+    rdfc:channels [
+        rdfc:dataInput <sdsifychannel>;
+        rdfc:metadataInput <metadata>;
+        rdfc:dataOutput <bucketized>;
+        rdfc:metadataOutput <bucketizedMetadata>;
+    ];
+    rdfc:bucketizeStrategy [
+        a tree:TimebasedFragmentation;
+        tree:timestampPath sosa:resultTime;
+        tree:maxSize 100;
+        tree:k 4;
+        tree:minBucketSpan 3600;        # In seconds
+    ];
+    rdfc:savePath <./buckets_save.json>;
+    rdfc:outputStreamId <https://w3id.org/sds#Stream>;
+    rdfc:prefix "root/".                  
+
+
+
+
+
+
+
+
+
+
+
 # <prettify2> a rdfc:PrettifyProcessorPy;
 #     rdfc:reader <sdsifychannel>;
 #     rdfc:writer <prettyData2>.
 
 <RDFSaver> a rdfc:PrintProcessorPy;
   #rdfc:reader <TSS2RDFchannel>;
-  rdfc:reader <sdsifychannel>;
+  rdfc:reader <bucketized>;
   rdfc:loc "./WFresources/generated/RDF_data.ttl". 
 
 <GraphDB> a rdfc:GraphdbProcessorPy;
-  rdfc:reader <TSS2RDFchannel>.
+  rdfc:reader <TSS2RDFchannel>; 
+  rdfc:type "application/n-quads". #"text/turtle" "application/n-quads"

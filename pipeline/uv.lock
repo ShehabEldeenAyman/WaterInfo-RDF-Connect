@@ -122,7 +122,7 @@ dependencies = [
     { name = "rdfc-runner" },
     { name = "requests" },
 ]
-sdist = { hash = "sha256:34b8cc286c727a503117ae8b1082cfdb96a3c67c2ca2255b8d8400fe4db6f919" }
+sdist = { hash = "sha256:61ce083f2a16c04430a000a7c170f83ab1e8c03c02113118711b0dcdba97224c" }
 
 [package.metadata]
 requires-dist = [

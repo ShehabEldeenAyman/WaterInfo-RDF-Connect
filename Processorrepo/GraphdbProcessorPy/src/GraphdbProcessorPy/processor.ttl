@@ -17,4 +17,11 @@ rdfc:GraphdbProcessorPy rdfc:pyImplementationOf rdfc:Processor;
         sh:name "reader";
         sh:minCount 1;
         sh:maxCount 1;
+    ],
+    [
+        sh:datatype xsd:string;
+        sh:path rdfc:type;
+        sh:name "type";
+        sh:minCount 1;
+        sh:maxCount 1;
     ].
