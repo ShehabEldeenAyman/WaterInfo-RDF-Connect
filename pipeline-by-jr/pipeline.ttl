@@ -1,0 +1,140 @@
+@prefix rdfc: <https://w3id.org/rdf-connect#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ex: <http://example.com/>.
+@prefix tree: <https://w3id.org/tree#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+
+### Import runners and processors
+
+# JavaScript runner and processors
+<> owl:imports <./node_modules/@rdfc/js-runner/index.ttl>,
+  <./node_modules/@rdfc/file-utils-processors-ts/processors.ttl>,
+  <./node_modules/@rdfc/sds-processors-ts/configs/sdsify.ttl>,
+  <./node_modules/@rdfc/sds-processors-ts/configs/bucketizer.ttl>,
+  <./node_modules/@rdfc/sds-processors-ts/configs/ldes_disk_writer.ttl>,
+  <./node_modules/@rdfc/log-processor-ts/processor.ttl>.
+
+# Java runner and processors
+<> owl:imports <https://javadoc.jitpack.io/com/github/rdf-connect/jvm-runner/runner/master-SNAPSHOT/runner-master-SNAPSHOT-index.jar>,
+    <./build/plugins/rml-processor-jvm-master-SNAPSHOT-all.jar>.
+
+# Python runner and processors
+<> owl:imports <./.venv/lib/python3.12/site-packages/rdfc_runner/index.ttl>,
+  <./.venv/lib/python3.12/site-packages/SHACLvalidatePy/processor.ttl>,
+  <./.venv/lib/python3.12/site-packages/PrintProcessorPy/processor.ttl>.
+
+### Define the channels
+
+<sourceData> a rdfc:Reader, rdfc:Writer.
+<mappingData> a rdfc:Reader, rdfc:Writer.
+<rdfData> a rdfc:Reader, rdfc:Writer.
+<validRdfData> a rdfc:Reader, rdfc:Writer.
+<shaclReport> a rdfc:Reader, rdfc:Writer.
+<sdsMetadata> a rdfc:Reader, rdfc:Writer.
+<sdsData> a rdfc:Reader, rdfc:Writer.
+<bucketizedData> a rdfc:Reader, rdfc:Writer.
+<bucketizedMetadata> a rdfc:Reader, rdfc:Writer.
+
+### Define the pipeline
+
+<> a rdfc:Pipeline;
+  rdfc:consistsOf [
+    rdfc:instantiates rdfc:NodeRunner;
+    rdfc:processor 
+        <dataReader>, 
+        <mappingReader>, 
+        <sdsify>,
+        <sdsMetadataReader>,
+        <sdsBucketizer>,
+        <ldesDiskWriter>;
+        #<logger>;
+  ], [
+       rdfc:instantiates rdfc:JvmRunner;
+       rdfc:processor <rmlMapper>;
+   ], [
+      rdfc:instantiates rdfc:PyRunner;
+      rdfc:processor <shaclValidator>, <shaclReporter>;
+   ].
+
+### Define the processors
+
+# Processor to read and stream out the source CSV data file
+<dataReader> a rdfc:GlobRead;
+    rdfc:glob <./WFresources/sample_data.csv>;
+    rdfc:output <sourceData>.
+
+# Processor to read and stream out the RML mappings
+<mappingReader> a rdfc:GlobRead;
+    rdfc:glob <./WFresources/mappings.rml.ttl>;
+    rdfc:output <mappingData>;
+    rdfc:closeOnEnd "false".
+
+# Processor to do the RML mapping
+<rmlMapper> a rdfc:RmlMapper;
+    rdfc:mappings <mappingData>;
+    rdfc:source [
+        rdfc:triggers true;
+        rdfc:reader <sourceData>;
+        rdfc:mappingId ex:source
+    ];
+    rdfc:defaultTarget [
+        rdfc:writer <rdfData>;
+        rdfc:format "turtle";
+    ].
+
+# Processor to do SHACL validation
+<shaclValidator> a rdfc:SHACLvalidatePy;
+    rdfc:datareader <rdfData>;
+    rdfc:datawriter <validRdfData>;
+    rdfc:shaclwriter <shaclReport>;
+    rdfc:loc "./WFresources/shape.ttl".
+
+# Processor to write the SHACL report to a text file
+<shaclReporter> a rdfc:PrintProcessorPy;
+    rdfc:reader <shaclReport>;
+    rdfc:loc "./WFresources/generated/shapereport.txt".
+
+# Processor to transform the validated RDF data into an SDS stream
+<sdsify> a rdfc:Sdsify;
+    rdfc:input <validRdfData>;
+    rdfc:output <sdsData>;
+    rdfc:stream <https://example.com/observationsStream>;
+    rdfc:typeFilter sosa:Observation;
+    rdfc:timestampPath sosa:resultTime.
+
+# Processor to read and stream out the SDS metadata file
+<sdsMetadataReader> a rdfc:GlobRead;
+    rdfc:glob <./WFresources/sds-metadata.ttl>;
+    rdfc:output <sdsMetadata>.
+
+# Processor to bucketize the SDS stream
+<sdsBucketizer> a rdfc:Bucketize;
+    rdfc:channels [
+        rdfc:dataInput <sdsData>;
+        rdfc:metadataInput <sdsMetadata>;
+        rdfc:dataOutput <bucketizedData>;
+        rdfc:metadataOutput <bucketizedMetadata>;
+    ];
+    rdfc:bucketizeStrategy [
+        a tree:TimebasedFragmentation;
+        tree:timestampPath sosa:resultTime;
+        tree:maxSize 100;
+        tree:k 4;
+        tree:minBucketSpan 3600;
+    ];
+    rdfc:savePath <./generated/buckets_save.json>;
+    rdfc:outputStreamId <https://example.com/observationsStream>;
+    rdfc:prefix "root/".
+
+# Processor to persist the bucketized LDES on disk
+<ldesDiskWriter> a rdfc:LdesDiskWriter;
+    rdfc:dataInput <bucketizedData>;
+    rdfc:metadataInput <bucketizedMetadata>;
+    rdfc:directory "./ldes".
+
+# <logger> a rdfc:LogProcessorJs;
+#     rdfc:reader <bucketizedMetadata>;
+#     rdfc:level "info";
+#     rdfc:label "bucketized-data".
+
