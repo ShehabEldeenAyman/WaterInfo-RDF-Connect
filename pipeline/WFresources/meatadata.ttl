@@ -108,22 +108,3 @@ ex:ObservationShape a sh:NodeShape ;
     sh:description "Observation timestamp (used by ldes:timestampPath)." ;
   ] .
 
-#################################################################
-# Example: show the actual member (repeated from your sample) included as a member
-#################################################################
-
-<http://example.com/reading_24002042_2025-08-12T12%3A02%3A00%2B00%3A00>
-  a sosa:Observation ;
-  sosa:hasSimpleResult 3.454e+01 ;
-  sosa:madeBySensor "24002042" ;
-  sosa:observedProperty "River Stage" ;
-  sosa:resultTime "2025-08-12T12:02:00+00:00"^^xsd:dateTime .
-
-#################################################################
-# Notes:
-# - This example implements a very simple per-year bucketization using TREE relations.
-# - A server implementing this metadata should create one tree:Node per-year (UTC) and
-#   ensure members are added to the node whose interval contains their sosa:resultTime.
-# - The ldes:timestampPath is set to sosa:resultTime so clients know which property
-#   to use for incremental harvesting.
-#################################################################
