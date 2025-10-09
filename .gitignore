@@ -129,3 +129,16 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Gradle build files
+.gradle
+build
+
+# Python and Hatch stuff
+.venv
+.pytest_cache
+__pycache__
+
+# Produced LDES files
+generated
+ldes

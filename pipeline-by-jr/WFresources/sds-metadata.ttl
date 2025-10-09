@@ -1,0 +1,69 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sds: <https://w3id.org/sds#>.
+@prefix ldes: <https://w3id.org/ldes#>.
+@prefix tree: <https://w3id.org/tree#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<https://example.com/observationsStream> a sds:Stream;
+  p-plan:wasGeneratedBy [
+    a p-plan:Activity;
+    rdfs:comment """
+            Reads a CSV file with water observations,
+            transforms every row into a sosa:Observation,
+            wraps them into an SDS stream,
+            bucketizes them in a time bucket-based B+Tree structure
+            and writes it into an LDES server data store.
+        """;
+  ];
+  sds:carries [ a sds:Member];
+  sds:shape _:wi_shape;
+  sds:dataset [
+    a dcat:Dataset;
+    dcat:title "WaterInfo.be observations";
+    dcat:publisher <http://julianrojas.org#me>, [ 
+        a foaf:Person; 
+        foaf:name "Shehabeldeen Abdelfatah" 
+    ] ;
+    ldes:timestampPath sosa:resultTime;
+    tree:shape _:wi_shape;
+    dcat:identifier <https://example.com/observationsStream/ldes>;
+  ].
+
+_:wi_shape a sh:NodeShape ;
+  sh:targetClass sosa:Observation ;
+  rdfs:comment "Minimal shape for the observations used in the example stream." ;
+  
+  # hasSimpleResult -> numeric value
+  sh:property [
+    sh:path sosa:hasSimpleResult ;
+    sh:datatype xsd:double ;
+    sh:minCount 1 ;
+    sh:description "Measured numeric value (required)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sosa:madeBySensor ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:description "Sensor identifier (as used in the sample)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sosa:observedProperty ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:description "Observed property (e.g., 'River Stage')." ;
+  ] ;
+  
+  sh:property [
+    sh:path sosa:resultTime ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:description "Observation timestamp (used by ldes:timestampPath)." ;
+  ] .

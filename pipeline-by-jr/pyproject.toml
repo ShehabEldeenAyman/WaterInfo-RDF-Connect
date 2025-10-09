@@ -1,0 +1,34 @@
+[project]
+name = "Waterinfo-pipeline"
+version = "0.0.1"
+description = "RDF-Connect pipeline to ingest Waterinfo in a knowledge graph."
+authors = [
+    { name = "Shehabeldeen Abdelfatah", email = "shehab.ayman@vito.be" },
+    { name = "Julián Rojas", email = "julianandres.rojasmelendez@ugent.be" }
+]
+readme = "README.md"
+requires-python = "== 3.12.*"
+license = "MIT"
+dependencies = [
+    "printprocessorpy",
+    "rdfc-runner>=0.0.3",
+    "shaclvalidatepy>=0.0.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["resources"]
+
+[tool.hatch.envs.default]
+type = "virtual"
+path = ".venv"
+system-packages = false
+installer = "uv"
+env-vars = { PYTHONPATH = "src" }
+
+[tool.uv.sources]
+shaclvalidatepy = { path = "../Processorrepo/SHACLvalidatePy/dist/shaclvalidatepy-0.0.1.tar.gz" }
+printprocessorpy = { path = "../Processorrepo/PrintProcessorPy/dist/printprocessorpy-0.0.1.tar.gz" }

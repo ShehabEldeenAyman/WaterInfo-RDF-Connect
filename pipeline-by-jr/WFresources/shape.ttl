@@ -1,0 +1,39 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+
+ex:ObservationShape
+    a sh:NodeShape ;
+    sh:targetClass sosa:Observation ;
+
+    # Each subject must have rdf:type sosa:Observation (already implied by targetClass)
+    
+    # must have at least one madeBySensor predicate and object
+    sh:property [
+        sh:path sosa:madeBySensor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # must have at least one simple result of type double
+    sh:property [
+        sh:path sosa:hasSimpleResult ;
+        sh:minCount 1 ;
+        sh:datatype xsd:double ;
+    ] ;
+
+    # must have exactly one observed property
+    sh:property [
+        sh:path sosa:observedProperty ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # must have result time of type xsd:dateTime
+    sh:property [
+        sh:path sosa:resultTime ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
