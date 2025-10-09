@@ -84,7 +84,6 @@ ex:ObservationShape a sh:NodeShape ;
     sh:description "Measured numeric value (required)." ;
   ] ;
   
-  # madeBySensor -> a sensor identifier (literal in your sample)
   sh:property [
     sh:path sosa:madeBySensor ;
     sh:datatype xsd:string ;
@@ -92,7 +91,6 @@ ex:ObservationShape a sh:NodeShape ;
     sh:description "Sensor identifier (as used in the sample)." ;
   ] ;
   
-  # observedProperty -> what is being measured
   sh:property [
     sh:path sosa:observedProperty ;
     sh:datatype xsd:string ;
@@ -100,7 +98,6 @@ ex:ObservationShape a sh:NodeShape ;
     sh:description "Observed property (e.g., 'River Stage')." ;
   ] ;
   
-  # resultTime -> timestamp used for ordering and pagination
   sh:property [
     sh:path sosa:resultTime ;
     sh:datatype xsd:dateTime ;
