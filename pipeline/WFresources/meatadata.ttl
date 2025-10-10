@@ -9,70 +9,91 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-#################################################################
-# Simple metadata for SOSA observations with per-year page bucketization
-# - timestampPath: sosa:resultTime
-# - bucketization: one TREE node (page) per calendar year (UTC)
-#################################################################
 
-# DCAT dataset (discovery)
-ex:ObservationsDataset a dcat:Dataset ;
-  rdfs:label "River stage observations (example)" ;
-  dcat:description "A small example dataset describing SOSA observations bucketized per-year." ;
-  dcat:identifier <http://example.com/observations> .
+# # DCAT dataset (discovery)
+# ex:ObservationsDataset a dcat:Dataset ;
+#   rdfs:label "River stage observations (example)" ;
+#   dcat:description "A small example dataset describing SOSA observations bucketized per-year." ;
+#   dcat:identifier <http://example.com/observations> .
 
-# LDES / stream entry (points to the timestamp path used for fragmentation)
-ex:ObservationsStream a ldes:EventStream ;
-  rdfs:label "Example LDES of SOSA Observations" ;
-  ldes:timestampPath sosa:resultTime ;
-  sds:dataset ex:ObservationsDataset .
+# # LDES / stream entry (points to the timestamp path used for fragmentation)
+# ex:ObservationsStream a ldes:EventStream ;
+#   rdfs:label "Example LDES of SOSA Observations" ;
+#   ldes:timestampPath sosa:resultTime ;
+#   sds:dataset ex:ObservationsDataset .
 
-# TREE Collection describing the paginated view (one page per calendar day)
-ex:ObservationsCollection a tree:Collection ;
-  rdfs:label "Observations paginated by day (UTC)" ;
-  tree:shape ex:ObservationShape ;
-  tree:view ex:NodeRoot .
+# # TREE Collection describing the paginated view (one page per calendar day)
+# ex:ObservationsCollection a tree:Collection ;
+#   rdfs:label "Observations paginated by day (UTC)" ;
+#   tree:shape ex:ObservationShape ;
+#   tree:view ex:NodeRoot .
 
-# Root node (entry point) - contains relations to day pages
-ex:NodeRoot a tree:Node ;
-  rdfs:comment "Root node that points to per-year pages. Each relation encodes the year's [>= start && < nextStart] interval." ;
-  tree:relation ex:R_2024 ;
-  tree:relation ex:R_2025 .
+# # Root node (entry point) - contains relations to day pages
+# ex:NodeRoot a tree:Node ;
+#   rdfs:comment "Root node that points to per-year pages. Each relation encodes the year's [>= start && < nextStart] interval." ;
+#   tree:relation ex:R_2024 ;
+#   tree:relation ex:R_2025 .
 
-# Relation for 2025 (members with resultTime >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z)
-# Relation for 2024 (members with resultTime >= 2024-01-01T00:00:00Z and < 2025-01-01T00:00:00Z)
-ex:R_2024 a tree:GreaterThanOrEqualToRelation ;
-  tree:node ex:Node_2024 ;
-  tree:path sosa:resultTime ;
-  tree:value "2024-01-01T00:00:00+00:00"^^xsd:dateTime .
-ex:R_2024_up a tree:LessThanRelation ;
-  tree:node ex:Node_2024 ;
-  tree:path sosa:resultTime ;
-  tree:value "2025-01-01T00:00:00+00:00"^^xsd:dateTime .
+# # Relation for 2025 (members with resultTime >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z)
+# # Relation for 2024 (members with resultTime >= 2024-01-01T00:00:00Z and < 2025-01-01T00:00:00Z)
+# ex:R_2024 a tree:GreaterThanOrEqualToRelation ;
+#   tree:node ex:Node_2024 ;
+#   tree:path sosa:resultTime ;
+#   tree:value "2024-01-01T00:00:00+00:00"^^xsd:dateTime .
+# ex:R_2024_up a tree:LessThanRelation ;
+#   tree:node ex:Node_2024 ;
+#   tree:path sosa:resultTime ;
+#   tree:value "2025-01-01T00:00:00+00:00"^^xsd:dateTime .
 
-# Relation for 2025 (members with resultTime >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z)
-ex:R_2025 a tree:GreaterThanOrEqualToRelation ;
-  tree:node ex:Node_2025 ;
-  tree:path sosa:resultTime ;
-  tree:value "2025-01-01T00:00:00+00:00"^^xsd:dateTime .
-ex:R_2025_up a tree:LessThanRelation ;
-  tree:node ex:Node_2025 ;
-  tree:path sosa:resultTime ;
-  tree:value "2026-01-01T00:00:00+00:00"^^xsd:dateTime .
+# # Relation for 2025 (members with resultTime >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z)
+# ex:R_2025 a tree:GreaterThanOrEqualToRelation ;
+#   tree:node ex:Node_2025 ;
+#   tree:path sosa:resultTime ;
+#   tree:value "2025-01-01T00:00:00+00:00"^^xsd:dateTime .
+# ex:R_2025_up a tree:LessThanRelation ;
+#   tree:node ex:Node_2025 ;
+#   tree:path sosa:resultTime ;
+#   tree:value "2026-01-01T00:00:00+00:00"^^xsd:dateTime .
 
-# Node (page) for 2025-08-12: contains the sample member(s)
-ex:Node_2024 a tree:Node ;
-  rdfs:label "Page: 2024 (UTC)" .
+# # Node (page) for 2025-08-12: contains the sample member(s)
+# ex:Node_2024 a tree:Node ;
+#   rdfs:label "Page: 2024 (UTC)" .
 
-ex:Node_2025 a tree:Node ;
-  rdfs:label "Page: 2025 (UTC)" ;
-  tree:member <http://example.com/reading_24002042_2025-08-12T12%3A02%3A00%2B00%3A00> .
+# ex:Node_2025 a tree:Node ;
+#   rdfs:label "Page: 2025 (UTC)" ;
+#   tree:member <http://example.com/reading_24002042_2025-08-12T12%3A02%3A00%2B00%3A00> .
 
-#################################################################
-# SHACL shape
-#################################################################
+# ex:ObservationShape a sh:NodeShape ;
+#   sh:targetClass sosa:Observation ;
+#   rdfs:comment "Minimal shape for the observations used in the example stream." ;
+  
 
-ex:ObservationShape a sh:NodeShape ;
+<https://example.com/observationsStream> a sds:Stream;
+  p-plan:wasGeneratedBy [
+    a p-plan:Activity;
+    rdfs:comment """
+            Reads a CSV file with water observations,
+            transforms every row into a sosa:Observation,
+            wraps them into an SDS stream,
+            bucketizes them in a time bucket-based B+Tree structure
+            and writes it into an LDES server data store.
+        """;
+  ];
+  sds:carries [ a sds:Member];
+  sds:shape _:wi_shape;
+  sds:dataset [
+    a dcat:Dataset;
+    dcat:title "WaterInfo.be observations";
+    dcat:publisher <http://julianrojas.org#me>, [ 
+        a foaf:Person; 
+        foaf:name "Shehabeldeen Abdelfatah" 
+    ] ;
+    ldes:timestampPath sosa:resultTime;
+    tree:shape _:wi_shape;
+    dcat:identifier <https://example.com/observationsStream/ldes>;
+  ].
+
+_:wi_shape a sh:NodeShape ;
   sh:targetClass sosa:Observation ;
   rdfs:comment "Minimal shape for the observations used in the example stream." ;
   
