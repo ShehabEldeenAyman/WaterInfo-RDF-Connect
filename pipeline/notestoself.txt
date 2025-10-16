@@ -1,0 +1,1 @@
+sds-storage-writer-ts/lib/extractor.js change shape
