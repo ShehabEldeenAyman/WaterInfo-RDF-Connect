@@ -25,8 +25,11 @@
 
   <./node_modules/@rdfc/sds-processors-ts/configs/sdsify.ttl>,
   <./node_modules/@rdfc/sds-processors-ts/configs/bucketizer.ttl>,
-  <./node_modules/@rdfc/sds-processors-ts/configs/ldes_disk_writer.ttl>
+  <./node_modules/@rdfc/sds-processors-ts/configs/ldes_disk_writer.ttl>,
 
+  <../Processorrepo/sds-storage-writer-ts/processor.ttl>
+  #<./node_modules/@rdfc/sds-storage-writer-ts/configs/processor.ttl>
+  #<./node_modules/@rdfc/sparql-ingest-processor-ts/processors.ttl>
 
   # <./node_modules/@rdfc/shacl-processor-ts/processors.ttl>
 
@@ -66,7 +69,8 @@
          <sdsify>,
          <metadataReader>,
          <bucketizer>,
-         <diskwriter>
+         <diskwriter>,
+         <ingest>
         #<validator>
        ;
    ], 
@@ -216,6 +220,15 @@ rdfc:timestampPath sosa:resultTime.
 
 
 
+<ingest> a rdfc:Ingest;
+    rdfc:dataInput <bucketized>;
+    rdfc:metadataInput <bucketizedMetadata>;
+    rdfc:database [ 
+        rdfc:url <mongodb://rdf_user:12345@localhost:27017/rdfconnect?authSource=rdfconnect>;
+        rdfc:metadata "META";
+        rdfc:data "DATA";
+        rdfc:index "INDEX";
+    ].
 
 
 
